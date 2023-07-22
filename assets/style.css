@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --dark: #20262e;
+  --white: #ededed;
+  --gray: #747474;
+  --red: #e26868;
+}
+html {
+}
+#main {
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  justify-content: space-between;
+  width: 100%;
+  height: 3rem;
+  background-color: var(--dark);
+}
+#nav {
+}
+#nav > li {
+  display: inline-block;
+}
+#nav li {
+  position: relative;
+  font-size: 20px;
+}
+#nav > li:hover > a {
+  color: #333;
+  background-color: var(--white);
+}
+#nav > li > a {
+  color: var(--white);
+}
+#nav li a {
+  display: block;
+  font-family: "Lato", sans-serif;
+  text-transform: uppercase;
+  font-size: medium;
+  font-weight: bold;
+  line-height: 3rem;
+  padding: 0 24px;
+  text-decoration: none;
+}
+#nav li .subnav {
+  display: none;
+  position: absolute;
+  background-color: var(--dark);
+}
+#nav li:hover .subnav {
+  display: block;
+}
+.subnav li a {
+  color: var(--white);
+}
+.subnav li:hover a {
+  background-color: var(--white);
+  color: var(--dark);
+}
+.subnav li {
+  width: 100%;
+  list-style-type: none;
+}
+header .find i {
+  color: var(--white);
+  line-height: 3rem;
+  margin: 0 2rem;
+}
+#content {
+  margin-top: 3rem;
+}
+#content .slider {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 50%;
+  background-image: url(./img/img_la.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.slider .location {
+  font-family: "Lato", sans-serif;
+  position: absolute;
+  bottom: 2rem;
+  text-align: center;
+  color: var(--white);
+}
+.slider .location p {
+  padding: 1rem;
+}
+#content .about, .contact{
+  padding: 5rem 2rem;
+  width: 52rem;
+  margin: auto;
+  height: fit-content;
+}
+#content .about h1,
+.tourdate h1,
+.contact h1{
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+}
+#content .about h5,
+.tourdate h5,
+.contact h5{
+  font-family: consolas;
+  color: var(--gray);
+  text-align: center;
+  margin: 2rem;
+  font-style: italic;
+  font-size: medium;
+}
+#content .about p {
+  text-align: justify;
+  padding: 0 2rem;
+  font-family: "Roboto", sans-serif;
+}
+#content .items {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 3rem;
+}
+#content .items .item {
+  text-align: center;
+}
+.item img {
+  margin: 2rem;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 5px;
+}
+.item h6 {
+  font-size: large;
+  font-family: "Roboto", sans-serif;
+  font-weight: lighter;
+}
+#content .tourdate {
+  color: var(--white);
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  background-color: var(--dark);
+  padding: 5rem 2rem;
+}
+.tourdate .date {
+  width: 50rem;
+  margin: auto;
+  height: fit-content;
+  background-color: var(--white);
+  color: var(--dark);
+}
+.date .month {
+  position: relative;
+  display: flex;
+  margin: auto;
+  padding: 0.7rem;
+}
+.month .status {
+  margin: 0 1rem;
+  background-color: var(--red);
+  padding: 2px;
+  color: var(--white);
+}
+.month .next {
+  position: absolute;
+  background-color: var(--dark);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  right: 2rem;
+  color: var(--white);
+}
+.tourdate .locate {
+  display: flex;
+  width: 50rem;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  padding: 2rem 0;
+  justify-content: space-around;
+}
+.locate .addr {
+  width: 15rem;
+  background-color: var(--white);
+  color: var(--dark);
+}
+.addr img {
+  width: 15rem;
+}
+.addr img:hover{
+  filter: brightness(0.5);
+}
+.addr .infor{
+  padding: .8rem;
+  margin-bottom: .5rem;
+  text-align: left;
+}
+.addr .infor h6, 
+.addr .infor .day{
+  margin-bottom: 1rem;
+  font-size: medium;
+}
+.addr .infor .day{
+  color: var(--gray);
+}
+.addr .infor p{
+  font-weight: 400;
+  font-size: .9rem;
+}
+.btnTicket,
+input[type="submit"]{
+  background-color: var(--dark);
+  color: var(--white);
+  height: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+.btnTicket{ 
+  line-height: 2rem;
+  width: 8rem;
+}
+
+
+.btnTicket:hover{
+  background-color: var(--gray);
+  color: var(--dark);
+  cursor: pointer;
+}
+.contactinfor{
+  display: flex;
+  position: relative;
+}
+.contactaddr{
+  width:50%;
+  height: 10rem;
+  font-size: larger;
+}
+.contactaddr .address,.address i{
+  padding: .3rem;
+}
+.getInfor{
+  width: 50%;
+  height: 10rem;
+}
+
+.getInfor .user{
+  display: flex;
+  justify-content: space-between;
+}
+.getInfor input{
+  padding: .5rem;
+  border: 1px solid var(--gray);
+  margin: .8rem 0;
+}
+.getInfor .message{
+  width: 100%;
+}
+input[type="submit"]{
+  line-height: 1rem;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+#content .map{
+  background-image: url(./img/map.jpg);
+  padding-top: 50%;
+  background-size: cover;
+  filter: saturate(0.5);
+}
+footer {
+  height: 10rem;
+  padding: 3rem;
+}
+footer .icon{
+  width: 10rem;
+  font-size: x-large;
+  color: var(--gray);
+  margin: auto;
+}
+.icon i:hover{
+  color:var(--white);
+}
+footer .copy{
+  text-align: center;
+  padding: 1rem;
+  font-family: 'Source Code Pro', monospace;
+  font-size: smaller;
+  color: var(--gray);
+}
